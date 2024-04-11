@@ -66,3 +66,11 @@ for (let i=0;i<tamano;i++){
 }
 
 // -------------- Ejercicios --------------------------
+
+function convertir(C) {
+    f=32+(9*C/5)
+    console.log("El valor en Fahrenheit seria: " , f)
+}
+
+var celsi = prompt("Pon el valor a convertir: ")
+convertir(celsi)
