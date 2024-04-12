@@ -21,7 +21,57 @@ var Netcore = [{
     "Blue": "60"
 }];
 
-if (quien=="T"||"t"){
+if (quien == "C" || "c"){
+
+    var inscritos=[{
+        "identificación": 2142, "Nombres":"pepo","Estado":"Inscrito"
+    }]
+    
+    var que_hacer = prompt("Que desea hacer:\n 1. Procesar las inscripciones \n 2. Cambiar estado de ingreso \n 3. Agregar un estudiante a un grupo\n 4. Ver rutas")
+
+    if (que_hacer==1){
+        let nuevoInscito = prompt("Pon la siguiente informaciòn para inscribir un estudiante: \n - # de identificación. - Nombres. - Apellidos. - Dirección. - Acudiente. - Teléfonos de contacto(# de celular y #fijo). - Estado (En proceso de ingreso, Inscrito, Aprobado,Cursando, Graduado, Expulsado, Retirado). - Riesgo.");
+        nuevoInscito = inscritos.push;
+
+        console.log(inscritos);
+    }
+
+    else if (que_hacer==2){
+        var nombre = prompt("Pon la identificacion del estudiante:")
+        var notaInicial = prompt("Nota de examen de ingreso:")
+        if (notaInicial>=60){
+        for (var i = 0; i < inscritos.length; i++) {
+                inscritos[i].Estado = "Aprobado"}
+        console.log(inscritos);
+        }
+        else {
+            console.log("No paso :(")
+        }
+    }
+
+    else if (que_hacer==3){
+        let donde = prompt("Donde lo vas a agregar: \n 1.La ruta NodeJS \n 2.La ruta Java \n 3. NetCore")
+        if (donde==1){
+            let nuevaLongitud = PNode.push(prompt("(Nombre del estudiante:nota promedio"));
+            console.log(PNode)
+        }
+        else if (donde==2){
+            let nuevaLongitud = Java.push(prompt("(Nombre del estudiante:nota promedio"));
+            console.log(Java)
+        }
+        else if (donde==3){
+            let nuevaLongitud = Netcore.push(prompt("(Nombre del estudiante:nota promedio"));
+            console.log(Netcore)
+        }
+        else {console.log("No se encuentra esa ruta")}
+    }
+    else if (que_hacer==4){
+        let cual = prompt("Que ruta deseas ver: \n 1.La ruta NodeJS \n 2.La ruta Java \n 3. NetCore")
+        
+    }
+}
+
+else if (quien=="T"||"t"){
 
     var inscritos=[{
         "identificación": 2142, "Nombres":"pepo","Estado":"Inscrito"
@@ -40,28 +90,5 @@ if (quien=="T"||"t"){
     }
     else {
         console.log("Haz puesto mal el nùmero")
-    }
-}
-
-else if (quien == "C" || "c"){
-
-    var que_hacer = prompt("Que desea hacer:\n 1. Procesar las inscripciones \n 2. Cambiar estado de ingreso")
-
-    if (que_hacer==1){
-        let nuevoInscito = prompt("Pon la siguiente informaciòn para inscribir un estudiante: \n - # de identificación. - Nombres. - Apellidos. - Dirección. - Acudiente. - Teléfonos de contacto(# de celular y #fijo). - Estado (En proceso de ingreso, Inscrito, Aprobado,Cursando, Graduado, Expulsado, Retirado). - Riesgo.");
-        nuevoInscito = inscritos.push;
-    }
-
-    else if (que_hacer==2){
-        var nombre = prompt("Pon la identificacion del estudiante:")
-        var notaInicial = prompt("Nota de examen de ingreso:")
-        if (notaInicial>=60){
-        for (var i = 0; i < inscritos.length; i++) {
-                inscritos[i].Estado = "Aprobado"}
-        console.log(inscritos);
-        }
-        else {
-            console.log("No paso :(")
-        }
     }
 }
