@@ -27,7 +27,7 @@ if (quien == "C" || "c"){
         "identificación": 2142, "Nombres":"pepo","Estado":"Inscrito"
     }]
     
-    var que_hacer = prompt("Que desea hacer:\n 1. Procesar las inscripciones \n 2. Cambiar estado de ingreso \n 3. Agregar un estudiante a un grupo\n 4. Ver rutas")
+    var que_hacer = prompt("Que desea hacer:\n 1. Procesar las inscripciones \n 2. Cambiar estado de ingreso \n 3. Agregar un estudiante a un grupo\n 4. Rutas")
 
     if (que_hacer==1){
         let nuevoInscito = prompt("Pon la siguiente informaciòn para inscribir un estudiante: \n - # de identificación. - Nombres. - Apellidos. - Dirección. - Acudiente. - Teléfonos de contacto(# de celular y #fijo). - Estado (En proceso de ingreso, Inscrito, Aprobado,Cursando, Graduado, Expulsado, Retirado). - Riesgo.");
@@ -66,8 +66,12 @@ if (quien == "C" || "c"){
         else {console.log("No se encuentra esa ruta")}
     }
     else if (que_hacer==4){
-        let cual = prompt("Que ruta deseas ver: \n 1.La ruta NodeJS \n 2.La ruta Java \n 3. NetCore")
-        
+        let editarRutas = prompt("Que deseas hacer:\n 1. Editar Rutas\n 2. Ver rutas")
+        if (editarRutas==2){
+            let cual = prompt("Que ruta deseas ver: \n 1.La ruta NodeJS \n 2.La ruta Java \n 3. NetCore")
+            rutas.forEach((Element)=console.log(Element,indice))
+        }
+
     }
 }
 
