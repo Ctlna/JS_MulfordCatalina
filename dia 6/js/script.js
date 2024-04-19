@@ -1,9 +1,11 @@
 // Punto 1
+console.log("%c Punto 1","font-size:2em; Color: Hotpink")
 var person = []
 person.push({nombre:"Azucar", age:24, country:"Cuba"});
 person.push({nombre:"Pepa", age:5, country:"Liberia"});
 console.table(person);
 // Punto 2
+console.log("%c Punto 2","font-size:2em; Color: Hotpink")
 function ara(a,b){
     area=a*b
     return area
@@ -22,6 +24,7 @@ var Rectangle={
 }
 console.table(Rectangle)
 // Punto 3
+console.log("%c Punto 3","font-size:2em; Color: Hotpink")
 var Vehicle=[
     {   make:"In China",
         model:"Chery Tiggo 2",
@@ -31,20 +34,26 @@ var Vehicle=[
 ]
 console.table(Vehicle)
 // Punto 4
+console.log("%c Punto 4","font-size:2em; Color: Hotpink")
 var BankAccount =[{
     account: 154151,
     balance: 2000,
-    deposito: "No supe"
-/*    depositar: depositar()*/
+    deposito: function depositar(){
+        poner=3000;
+        cambiar=BankAccount.balance+3000;
+        BankAccount.balance(cambiar);
+        return cambiar
+    },
+    withdraw: function quitar(){
+        poner=3000;
+        cambiar=BankAccount.balance-poner;
+        BankAccount.balance[cambiar];
+        return cambiar
+    }
 }]
-/*function depositar(){
-    poner=3000;
-    cambiar=BankAccount.balance+3000;
-    BankAccount.balance(cambiar);
-    return fc
-}*/
 console.table(BankAccount)
 // Punto 5
+console.log("%c Punto 5","font-size:2em; Color: Hotpink")
 function tri(){
     alt=53
     bas=41
@@ -62,7 +71,8 @@ var Shape=[
 ]
 console.table(Shape)
 // Punto 6
+//console.log("%c Punto 6","font-size:2em; Color: Hotpink")
 
 
 // Punto 7
-
+var Student =[]
