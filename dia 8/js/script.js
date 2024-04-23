@@ -39,11 +39,11 @@ function funcionar(dataL){
         <p></p>
 
         <p>Films:</p>
-        <p><a href ="${dataL.films}">${dataL.films}</a></p>
-        <p><a href ="${dataL.films}">${dataL.films}</a></p>
-        <p><a href ="${dataL.films}">${dataL.films}</a></p>
-        <p><a href ="${dataL.films}">${dataL.films}</a></p>
-        <p><a href ="${dataL.films}">${dataL.films}</a></p>
+        <p><a href ="https://swapi.py4e.com/api/films/1/">Films 1</a></p>
+        <p><a href ="https://swapi.py4e.com/api/films/2/">Films 2</a></p>
+        <p><a href ="https://swapi.py4e.com/api/films/3/">Films 3</a></p>
+        <p><a href ="https://swapi.py4e.com/api/films/6/">Films 6</a></p>
+        <p><a href ="https://swapi.py4e.com/api/films/7/>Films 7</a></p>
         <p></p>
 
         <p>Species:</p>
