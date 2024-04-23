@@ -25,41 +25,41 @@ function displayHero(data){
         hInfo.innerHTML=`
         <p></p>
         <p>Name:${data.name}</p>
-        <p>Inteligencia:${data.powerstats}
+        <p>Powerstats:${data.powerstats}
         <p>Inteligencia:${data.powerstats.intelligence}
-        <p>Inteligencia:${data.powerstats.strength}
-        <p>Inteligencia:${data.powerstats.speed}
-        <p>Inteligencia:${data.powerstats.durability}
-        <p>Inteligencia:${data.powerstats.power}
-        <p>Inteligencia:${data.powerstats.combat}
+        <p>Strength:${data.powerstats.strength}
+        <p>Spped:${data.powerstats.speed}
+        <p>Durability:${data.powerstats.durability}
+        <p>Power:${data.powerstats.power}
+        <p>Combat:${data.powerstats.combat}
         <p></p>
-        <p>Inteligencia:${data.biography}
-        <p>Inteligencia:${data.biography.full-name}
-        <p>Inteligencia:${data.biography.alter-egos}
-        <p>Inteligencia:${data.biography.aliases}
-        <p>Inteligencia:${data.biography.place-of-birth}
-        <p>Inteligencia:${data.biography.first-appearance}
-        <p>Inteligencia:${data.biography.publisher}
-        <p>Inteligencia:${data.biography.alignment}
+        <p>Biography:${data.biography}
+        <p>Full-Name:${data.biography.full_name}
+        <p>Alter-Egos:${data.biography.alter_egos}
+        <p>Aliases:${data.biography.aliases}
+        <p>Place-of-Birth:${data.biography.place_of_birth}
+        <p>First_Appearance:${data.biography.first_appearance}
+        <p>Publisher:${data.biography.publisher}
+        <p>Alignment:${data.biography.alignment}
         <p></p>
-        <p>Inteligencia:${data.appearance}
-        <p>Inteligencia:${data.appearance.gender}
-        <p>Inteligencia:${data.appearance.race}
-        <p>Inteligencia:${data.appearance.height}
-        <p>Inteligencia:${data.appearance.weight}
-        <p>Inteligencia:${data.appearance.eye-color}
-        <p>Inteligencia:${data.appearance.hair-color}
+        <p>Appearance:${data.appearance}
+        <p>Gender:${data.appearance.gender}
+        <p>Race:${data.appearance.race}
+        <p>Height:${data.appearance.height}
+        <p>Weight:${data.appearance.weight}
+        <p>Eye-Color:${data.appearance.eye_color}
+        <p>Hair-Color:${data.appearance.hair_color}
         <p></p>
-        <p>Inteligencia:${data.work}
-        <p>Inteligencia:${data.work.occupation}
-        <p>Inteligencia:${data.work.base}
+        <p>Work:${data.work}
+        <p>Occupation:${data.work.occupation}
+        <p>Base:${data.work.base}
         <p></p>
-        <p>Inteligencia:${data.connections}
-        <p>Inteligencia:${data.connections.group-affiliation}
-        <p>Inteligencia:${data.connections.relatives}
+        <p>Connections:${data.connections}
+        <p>Group-Affiliation:${data.connections.group_affiliation}
+        <p>Relatives:${data.connections.relatives}
         <p></p>
-        <p>Inteligencia:${data.image}
-        <p>Inteligencia:${data.work.url}
+        <p>image:${data.image}</p>
+        <p><img src="${data.image.url}"/></p>
         `
     }
 }
