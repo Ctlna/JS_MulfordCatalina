@@ -33,33 +33,33 @@ function funcionar(dataL){
         <p>Gender:${dataL.gender}</p>
         <p></p>
 
-        <p>Homeworld:<a href= "${dataL.homeworld.url}"></a></p>
+        <p>Homeworld:</p>
+        <p><a href= ${dataL.homeworld.url}>${dataL.homeworld}</a></p>
+
         <p></p>
 
-        <p>Films:
-        <a href ="${dataL.films.url}"></a>
-        <a href ="${dataL.films.url}"></a>
-        <a href ="${dataL.films.url}"></a>
-        <a href ="${dataL.films.url}"></a>
-        <a href ="${dataL.films.url}"></a>
-        </p>
+        <p>Films:</p>
+        <p><a href ="${dataL.films.url}">${dataL.films}</a></p>
+        <p><a href ="${dataL.films.url}">${dataL.films}</a></p>
+        <p><a href ="${dataL.films.url}">${dataL.films}</a></p>
+        <p><a href ="${dataL.films.url}">${dataL.films}</a></p>
+        <p><a href ="${dataL.films.url}">${dataL.films}</a></p>
         <p></p>
 
-        <p>Species:<a href="${dataL.species.url}>"</a></p>
+        <p>Species:</p>
+        <p><a href="${dataL.species.url}">${dataL.species}</a></p>
         <p></p>
 
-        <p>Vehicles: "${dataL.vehicles.url}"</a></p>
+        <p>Vehicles:</p>
+        <p><a href= ${dataL.vehicles.url}>${dataL.vehicles}</a></p>
         <p></p>
 
-        <p>Starships:"${dataL.starships.url}"</a></p>
-        <p></p>
+        <p>Starships:</p>
+        <p><a href="${dataL.starships.url}">${dataL.starships}</a></p>
         
         <p>Created: ${dataL.created}</p>
         <p>Edited: ${dataL.edited}</p>
-        <p>url: \n   ${dataL.url}</p>
+        <p>url:</p>
+        <p><a href= ${dataL.url}>${dataL.url}</a></p>
         `}
 }
-
-/*        <p>link:</p>
-<p><img src="${dataL.films.url}"/></p>
-<p></p>*/
