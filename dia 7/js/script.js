@@ -22,10 +22,12 @@ function displayHero(data){
         hInfo.innerHTML=`<p>Error:${data.error}</p>`;
     }
     else{
-        hInfo.innerHTML=`
+        hInfo.innerHTML=`        <p></p>
+        <p>image:</p>
+        <p><img src="${data.image.url}"/></p>
         <p></p>
         <p>Name:${data.name}</p>
-        <p>Powerstats:${data.powerstats}
+        <p>Powerstats:
         <p>Inteligencia:${data.powerstats.intelligence}
         <p>Strength:${data.powerstats.strength}
         <p>Spped:${data.powerstats.speed}
@@ -33,7 +35,7 @@ function displayHero(data){
         <p>Power:${data.powerstats.power}
         <p>Combat:${data.powerstats.combat}
         <p></p>
-        <p>Biography:${data.biography}
+        <p>Biography:
         <p>Full-Name:${data.biography.full_name}
         <p>Alter-Egos:${data.biography.alter_egos}
         <p>Aliases:${data.biography.aliases}
@@ -42,7 +44,7 @@ function displayHero(data){
         <p>Publisher:${data.biography.publisher}
         <p>Alignment:${data.biography.alignment}
         <p></p>
-        <p>Appearance:${data.appearance}
+        <p>Appearance:
         <p>Gender:${data.appearance.gender}
         <p>Race:${data.appearance.race}
         <p>Height:${data.appearance.height}
@@ -50,16 +52,13 @@ function displayHero(data){
         <p>Eye-Color:${data.appearance.eye_color}
         <p>Hair-Color:${data.appearance.hair_color}
         <p></p>
-        <p>Work:${data.work}
+        <p>Work:
         <p>Occupation:${data.work.occupation}
         <p>Base:${data.work.base}
         <p></p>
-        <p>Connections:${data.connections}
+        <p>Connections:
         <p>Group-Affiliation:${data.connections.group_affiliation}
         <p>Relatives:${data.connections.relatives}
-        <p></p>
-        <p>image:${data.image}</p>
-        <p><img src="${data.image.url}"/></p>
         `
     }
 }
