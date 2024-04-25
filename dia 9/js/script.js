@@ -5,7 +5,6 @@ function fetchSwapi(){
     xhr.onreadystatechange=function(){
         if (this.readyState===4 && this.status===200){
             let response = JSON.parse(this.responseText);
-            console.log(response);
             funcionar(response);
         }
         else if(this.readyState===4){
@@ -15,6 +14,7 @@ function fetchSwapi(){
     };
     xhr.send();
 }
+
 function funcionar(dataL){
     let info=document.getElementById('espacio')
     if (dataL.response==="error"){
@@ -34,18 +34,57 @@ function funcionar(dataL){
         <p></p>
 
         <p>Homeworld:</p>
-        <p><a href= ${dataL.homeworld}>${dataL.homeworld}</a></p>
-
-        <p></p>
-
-        <p>Films:</p>
+        
+        `
+        fetch(dataL.homeworld)
+        .then(response=>response.json())
+        .then(homeworldDataL=>{
+            const homeworldI = `
+            <p>Name: ${homeworldDataL.name} </p> 
+            <p>Rotation Period: ${homeworldDataL.rotation_period} </p> 
+            <p>Orbital Period: ${homeworldDataL.orbital_period} </p> 
+            <p>Diameter: ${homeworldDataL.diameter} </p> 
+            <p>Climate: ${homeworldDataL.climate} </p> 
+            <p>Gravity: ${homeworldDataL.gravity} </p> 
+            <p>Terrain: ${homeworldDataL.terrain} </p> 
+            <p>Surface Water: ${homeworldDataL.surface_water} </p> 
+            <p>Population: ${homeworldDataL.population} </p> 
+            <p>Created: ${homeworldDataL.created} </p> 
+            <p>Edited: ${homeworldDataL.edited} </p> 
+            <p>url: ${homeworldDataL.url} </p> 
+            `
+        });
+        `
+        <p>Films:</p>`
+        fetch(dataL.films[0])
+        .then(response=>response.json())
+        .then(filmsDataL=>{
+            const filmsI = 
+            `
+            <p>Name: ${filmsDataL.name} </p>
+            <p>Episode: ${filmsDataL.episode} </p>
+            <p>Opening crawl: ${filmsDataL.opening_crawl} </p>
+            <p>Director: ${filmsDataL.director} </p>
+            <p>Producer: ${filmsDataL.producer} </p>
+            <p>Release date: ${filmsDataL.release_date} </p>
+            <p>Created: ${filmsDataL.created} </p>
+            <p>Edited: ${filmsDataL.edited} </p>
+            <p>url: ${filmsDataL.url} </p>
+            `;
+            document.getElementById('film').innerHTML=
+            `<p>Film:</p> ${filmsI} `
+        });
+        
+        `
         <p><a href ="https://swapi.py4e.com/api/films/1/">Films 1</a></p>
         <p><a href ="https://swapi.py4e.com/api/films/2/">Films 2</a></p>
         <p><a href ="https://swapi.py4e.com/api/films/3/">Films 3</a></p>
         <p><a href ="https://swapi.py4e.com/api/films/6/">Films 6</a></p>
         <p><a href ="https://swapi.py4e.com/api/films/7/>Films 7</a></p>
         <p></p>
-
+        `
+        
+        `
         <p>Species:</p>
         <p><a href="${dataL.species}">${dataL.species}</a></p>
         <p></p>
