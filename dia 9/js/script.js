@@ -72,56 +72,58 @@ function funcionar(dataL){
             
         </table>
         `
-        fetch(dataL.films[0])
-        .then(response=>response.json())
-        .then(filmsDataL=>{
-            const filmsI =`
-            <table class="table table-striped-columns table-info">
-                <th>
-                    <tr>
-                        <td class="text-success-emphasis">Name</td>
-                        <td class="text-center">${filmsDataL.name}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Episode</td>
-                        <td class="text-center">${filmsDataL.episode}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Opening crawl</td>
-                        <td class="text-center">${filmsDataL.opening_crawl}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Director</td>
-                        <td class="text-center">${filmsDataL.director}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Producer</td>
-                        <td class="text-center">${filmsDataL.producer}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Release date</td>
-                        <td class="text-center">${filmsDataL.release_date}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Created</td>
-                        <td class="text-center">${filmsDataL.created}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">Edited</td>
-                        <td class="text-center">${filmsDataL.edited}</td>
-                    </tr>
-                    <tr>
-                        <td class="text-success-emphasis">url</td>
-                        <td class="text-center">${filmsDataL.url}</td>
-                    </tr>
-                </th>    
-                `;
-                document.getElementById('film').innerHTML=
-                `<p>Film:</p> ${filmsI} 
-            </table>
-                `
-        });   
-        `
+        dataL.films.forEach(filmLink => {
+            fetch(filmLink)
+            .then(response => response.json())
+            .then(filmsDataL => {
+                const filmsI =`
+                <table class="table table-striped-columns table-info">
+                    <th>
+                        <tr>
+                            <td class="text-success-emphasis">Title</td>
+                            <td class="text-center">${filmsDataL.title}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Episode</td>
+                            <td class="text-center">${filmsDataL.episode_id}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Opening crawl</td>
+                            <td class="text-center">${filmsDataL.opening_crawl}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Director</td>
+                            <td class="text-center">${filmsDataL.director}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Producer</td>
+                            <td class="text-center">${filmsDataL.producer}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Release date</td>
+                            <td class="text-center">${filmsDataL.release_date}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Created</td>
+                            <td class="text-center">${filmsDataL.created}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">Edited</td>
+                            <td class="text-center">${filmsDataL.edited}</td>
+                        </tr>
+                        <tr>
+                            <td class="text-success-emphasis">url</td>
+                            <td class="text-center">${filmsDataL.url}</td>
+                        </tr>
+                    </th>    
+                    `;
+                    document.getElementById('film').innerHTML+=
+                    `<p>Film:</p> ${filmsI} 
+                </table>
+                    `
+            });
+    });
+            `
         <p>Species:</p>
         <p><a href="${dataL.species}">${dataL.species}</a></p>
         <p></p>
