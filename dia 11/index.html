@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRUEBA POKEAPI</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="jugo">
-        <img src="./scr/pokedex.png" alt="foto" style="position:absolute; left:40em; top:7em;">
-        <div id="info" style="top: 17em;
-        background-color: transparent;
-        width: 17em;
-        height: 14em;
-        position: absolute;
-        left: 44em;"></div>
-        <div id="busca" style="position: absolute; left:50em;top:36em;text-align:center">
+        <img src="./scr/pokedex.png" alt="foto" id="consola">
+        <div id="info" ></div>
+        <div id="busca">
             <input type="number" name="ID" id="elID" placeholder="Pon el ID"class="form-control input-sm solo_numeros" >
             <br>
             <button onclick="fetchDerecha()"><-Prev</button>

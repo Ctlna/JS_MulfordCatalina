@@ -1,0 +1,24 @@
+html{
+    background:linear-gradient(#31e0ff ,white)no-repeat;
+    width: 100%;
+    height: 100%;
+}
+#consola{
+    position:absolute; 
+    left:40em; 
+    top:7em;
+}
+#info{
+    top: 17em;
+    background-color: transparent;
+    width: 17em;
+    height: 14em;
+    position: absolute;
+    left: 44em;
+}
+#busca{
+    position: absolute; 
+    left:50em;
+    top:36em;
+    text-align:center
+}
