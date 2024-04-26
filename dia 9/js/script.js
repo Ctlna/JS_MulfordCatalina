@@ -77,6 +77,7 @@ function funcionar(dataL){
             .then(response => response.json())
             .then(filmsDataL => {
                 const filmsI =`
+                <p>Film</p>
                 <table class="table table-striped-columns table-info">
                     <th>
                         <tr>
@@ -118,23 +119,177 @@ function funcionar(dataL){
                     </th>    
                     `;
                     document.getElementById('film').innerHTML+=
-                    `<p>Film:</p> ${filmsI} 
+                    ` ${filmsI} 
                 </table>
                     `
             });
     });
             `
+            `
+            dataL.vehicles.forEach(filmLink1 => {
+                fetch(filmLink1)
+                .then(response => response.json())
+                .then(vehiclesDataL => {
+                    const vehiclesI =`
+                    <table class="table table-striped-columns table-info">
+                        <th>
+                            <tr>
+                                <td class="text-success-emphasis">Name</td>
+                                <td class="text-center">${vehiclesDataL.name}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Model</td>
+                                <td class="text-center">${vehiclesDataL.model}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Manufacturer</td>
+                                <td class="text-center">${vehiclesDataL.manufacturer}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Cost in Credits</td>
+                                <td class="text-center">${vehiclesDataL.cost_in_credits}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Length</td>
+                                <td class="text-center">${vehiclesDataL.length}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Max Atmosphering Speed</td>
+                                <td class="text-center">${vehiclesDataL.max_atmosphering_speed}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">crew</td>
+                                <td class="text-center">${vehiclesDataL.crew}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">passengers</td>
+                                <td class="text-center">${vehiclesDataL.passengers}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Cargo Capacity</td>
+                                <td class="text-center">${vehiclesDataL.cargo_capacity}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Consumables</td>
+                                <td class="text-center">${vehiclesDataL.consumables}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Vehicle Class</td>
+                                <td class="text-center">${vehiclesDataL.vehicle_class}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Created</td>
+                                <td class="text-center">${vehiclesDataL.created}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">Edited</td>
+                                <td class="text-center">${vehiclesDataL.edited}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-success-emphasis">url</td>
+                                <td class="text-center">${vehiclesDataL.url}</td>
+                            </tr>
+                        </th>    
+                        `;
+                        document.getElementById('vehicle').innerHTML+=
+                        `<p>Vehicle:</p> ${vehiclesI} 
+                    </table>
+                        `
+                });
+        });
+                `
         <p>Species:</p>
         <p><a href="${dataL.species}">${dataL.species}</a></p>
         <p></p>
 
-        <p>Vehicles:</p>
-        <p><a href= ${dataL.vehicles}>${dataL.vehicles}</a></p>
-        <p></p>
-
-        <p>Starships:</p>
+        <p>:</p>
         <p></p>
         
+
+        `
+        dataL.starships.forEach(filmLink => {
+            fetch(filmLink)
+            .then(response => response.json())
+            .then(starshipsDataL => {
+                const starshipsI =`
+                <p>Starships</p>
+                <table class="table table-striped-columns table-info">
+                <th>
+                <tr>
+                    <td class="text-success-emphasis">Name</td>
+                    <td class="text-center">${starshipsDataL.name}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Model</td>
+                    <td class="text-center">${starshipsDataL.model}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Manufacturer</td>
+                    <td class="text-center">${starshipsDataL.manufacturer}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Cost in Credits</td>
+                    <td class="text-center">${starshipsDataL.cost_in_credits}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Length</td>
+                    <td class="text-center">${starshipsDataL.length}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Max Atmosphering Speed</td>
+                    <td class="text-center">${starshipsDataL.max_atmosphering_speed}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">crew</td>
+                    <td class="text-center">${starshipsDataL.crew}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">passengers</td>
+                    <td class="text-center">${starshipsDataL.passengers}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Cargo Capacity</td>
+                    <td class="text-center">${starshipsDataL.cargo_capacity}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Consumables</td>
+                    <td class="text-center">${starshipsDataL.consumables}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Hyperdrive Rating</td>
+                    <td class="text-center">${starshipsDataL.hyperdrive_rating}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">MGLT</td>
+                    <td class="text-center">${starshipsDataL.MGLT}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Starship Class</td>
+                    <td class="text-center">${starshipsDataL.starship_class}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Created</td>
+                    <td class="text-center">${starshipsDataL.created}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">Edited</td>
+                    <td class="text-center">${starshipsDataL.edited}</td>
+                </tr>
+                <tr>
+                    <td class="text-success-emphasis">url</td>
+                    <td class="text-center">${starshipsDataL.url}</td>
+                </tr>
+            </th>  
+                    `;
+                    document.getElementById('starships').innerHTML+=
+                    ` ${starshipsI} 
+                </table>
+                    `
+            });
+    });
+            
+            `
+
         <p></p>
         <p>url:</p>
         <p><a href= ${dataL.url}>${dataL.url}</a></p>
@@ -183,11 +338,5 @@ function Home(dataH){
     }
 }
 
-`
-<p><a href ="https://swapi.py4e.com/api/films/1/">Films 1</a></p>
-<p><a href ="https://swapi.py4e.com/api/films/2/">Films 2</a></p>
-<p><a href ="https://swapi.py4e.com/api/films/3/">Films 3</a></p>
-<p><a href ="https://swapi.py4e.com/api/films/6/">Films 6</a></p>
-<p><a href ="https://swapi.py4e.com/api/films/7/>Films 7</a></p>
-<p></p>
+
 `*/
