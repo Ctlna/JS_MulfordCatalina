@@ -22,7 +22,7 @@ function funcionar(dataL){
     }
     else{
         info.innerHTML=`
-        <table class="table table-striped-columns table-info">
+        <table class="table table-striped-columns">
             <th>
                 <tr>
                     <td class="text-success-emphasis">Name</td>
@@ -79,7 +79,7 @@ function funcionar(dataL){
             .then(filmsDataL => {
                 const filmsI =`
                 <p>Film</p>
-                <table class="table table-striped-columns table-info">
+                <table class="table table-striped-columns">
                     <th>
                         <tr>
                             <td class="text-success-emphasis">Title</td>
@@ -132,7 +132,7 @@ function funcionar(dataL){
                 .then(response => response.json())
                 .then(vehiclesDataL => {
                     const vehiclesI =`
-                    <table class="table table-striped-columns table-info">
+                    <table class="table table-striped-columns">
                         <th>
                             <tr>
                                 <td class="text-success-emphasis">Name</td>
@@ -214,7 +214,7 @@ function funcionar(dataL){
             .then(starshipsDataL => {
                 const starshipsI =`
                 <p>Starships</p>
-                <table class="table table-striped-columns table-info">
+                <table class="table table-striped-columns">
                 <th>
                 <tr>
                     <td class="text-success-emphasis">Name</td>
@@ -295,7 +295,6 @@ function funcionar(dataL){
         <p>url:</p>
         <p><a href= ${dataL.url}>${dataL.url}</a></p>
         `
-         
     }
 }
     /*
