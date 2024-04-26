@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kode+Mono:wght@400..700&display=swap');
+body{
+    background-image: url(https://www.civitatis.com/blog/wp-content/uploads/2020/05/blo-star-wars.jpg);
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+      
+}
+h1{
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;      
+}
+#espacio{
+    width: 45em;
+    margin-left: 20em;
+}
+#film{
+    width: 60em;
+    margin-left: 16em;
+}

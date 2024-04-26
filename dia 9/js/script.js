@@ -21,57 +21,107 @@ function funcionar(dataL){
     }
     else{
         info.innerHTML=`
-        <table class="table table-striped-columns">
+        <table class="table table-striped-columns table-info">
             <th>
                 <tr>
-                    <td>Name</td>
-                    <td>${dataL.name}</td>
+                    <td class="text-success-emphasis">Name</td>
+                    <td class="text-center">${dataL.name}</td>
                 </tr>
                 <tr>
-                    <td>Height</td>
-                    <td>${dataL.height}</td>
+                    <td class="text-success-emphasis">Height</td>
+                    <td class="text-center">${dataL.height}</td>
                 </tr>
                 <tr>
-                    <td>Mass</td>
-                    <td>${dataL.mass}</td>
+                    <td class="text-success-emphasis">Mass</td>
+                    <td class="text-center">${dataL.mass}</td>
                 </tr>
                 <tr>
-                    <td>Hair-color</td>
-                    <td>${dataL.hair_color}</td>
+                    <td class="text-success-emphasis">Hair-color</td>
+                    <td class="text-center">${dataL.hair_color}</td>
                 </tr>
                 <tr>
-                    <td>Skin-color</td>
-                    <td>${dataL.skin_color}</td>
+                    <td class="text-success-emphasis">Skin-color</td>
+                    <td class="text-center">${dataL.skin_color}</td>
                 </tr>
                 <tr>
-                    <td>Eye-color</td>
-                    <td>${dataL.eye_color}</td>
+                    <td class="text-success-emphasis">Eye-color</td>
+                    <td class="text-center">${dataL.eye_color}</td>
                 </tr>
                 <tr>
-                    <td>Birth-year</td>
-                    <td>${dataL.birth_year}</td>
+                    <td class="text-success-emphasis">Birth-year</td>
+                    <td class="text-center">${dataL.birth_year}</td>
                 </tr>
                 <tr>
-                    <td>Gender</td>
-                    <td>${dataL.gender}</td>
+                    <td class="text-success-emphasis">Gender</td>
+                    <td class="text-center">${dataL.gender}</td>
                 </tr>
                 <tr>
-                    <td>Created</td>
-                    <td>${dataL.created}</td>
+                    <td class="text-success-emphasis">Created</td>
+                    <td class="text-center">${dataL.created}</td>
                 </tr>
                 <tr>
-                    <td>Edited</td>
-                    <td> ${dataL.edited}</td>
+                    <td class="text-success-emphasis">Edited</td>
+                    <td class="text-center"> ${dataL.edited}</td>
                 </tr>
                 <tr>
-                    <td>url</td>
-                    <td><a href="${dataL.starships}">${dataL.starships}</a></td>
+                    <td class="text-success-emphasis">url</td>
+                    <td class="text-center"><a href="${dataL.starships}">${dataL.starships}</a></td>
                 </tr>
 
             </th>
             
         </table>
-            
+        `
+        fetch(dataL.films[0])
+        .then(response=>response.json())
+        .then(filmsDataL=>{
+            const filmsI =`
+            <table class="table table-striped-columns table-info">
+                <th>
+                    <tr>
+                        <td class="text-success-emphasis">Name</td>
+                        <td class="text-center">${filmsDataL.name}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Episode</td>
+                        <td class="text-center">${filmsDataL.episode}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Opening crawl</td>
+                        <td class="text-center">${filmsDataL.opening_crawl}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Director</td>
+                        <td class="text-center">${filmsDataL.director}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Producer</td>
+                        <td class="text-center">${filmsDataL.producer}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Release date</td>
+                        <td class="text-center">${filmsDataL.release_date}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Created</td>
+                        <td class="text-center">${filmsDataL.created}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">Edited</td>
+                        <td class="text-center">${filmsDataL.edited}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-success-emphasis">url</td>
+                        <td class="text-center">${filmsDataL.url}</td>
+                    </tr>
+                </th>    
+                `;
+                document.getElementById('film').innerHTML=
+                `<p>Film:</p> ${filmsI} 
+            </table>
+                `
+        });   
+        `
         <p>Species:</p>
         <p><a href="${dataL.species}">${dataL.species}</a></p>
         <p></p>
@@ -87,75 +137,10 @@ function funcionar(dataL){
         <p>url:</p>
         <p><a href= ${dataL.url}>${dataL.url}</a></p>
         `
-        fetch(dataL.films[0])
-        .then(response=>response.json())
-        .then(filmsDataL=>{
-            const filmsI =`
-            <table class="table table-striped-columns">
-                <th>
-                    <tr>
-                        <td>Name</td>
-                        <td>${filmsDataL.name}</td>
-                    </tr>
-                    <tr>
-                        <td>Episode</td>
-                        <td>${filmsDataL.episode}</td>
-                    </tr>
-                    <tr>
-                        <td>Opening crawl</td>
-                        <td>${filmsDataL.opening_crawl}</td>
-                    </tr>
-                    <tr>
-                        <td>Director</td>
-                        <td>${filmsDataL.director}</td>
-                    </tr>
-                    <tr>
-                        <td>Producer</td>
-                        <td>${filmsDataL.producer}</td>
-                    </tr>
-                    <tr>
-                        <td>Release date</td>
-                        <td>${filmsDataL.release_date}</td>
-                    </tr>
-                    <tr>
-                        <td>Created</td>
-                        <td>${filmsDataL.created}</td>
-                    </tr>
-                    <tr>
-                        <td>Edited</td>
-                        <td>${filmsDataL.edited}</td>
-                    </tr>
-                    <tr>
-                        <td>url</td>
-                        <td>${filmsDataL.url}</td>
-                    </tr>
-                </th>    
-                `;
-                document.getElementById('film').innerHTML=
-                `<p>Film:</p> ${filmsI} 
-            </table>
-                `
-            fetch(dataL.films[0])
-            .then(response=>response.json())
-            .then(filmsDataL=>{
-                const filmsI = 
-                `
-                <p>Name: ${filmsDataL.name} </p>
-                <p>Episode: ${filmsDataL.episode} </p>
-                <p>Opening crawl: ${filmsDataL.opening_crawl} </p>
-                <p>Director: ${filmsDataL.director} </p>
-                <p>Producer: ${filmsDataL.producer} </p>
-                <p>Release date: ${filmsDataL.release_date} </p>
-                <p>Created: ${filmsDataL.created} </p>
-                <p>Edited: ${filmsDataL.edited} </p>
-                <p>url: ${filmsDataL.url} </p>
-                `;
-                document.getElementById('film').innerHTML=
-                `<p>Film:</p> ${filmsI} `
-        });    
+         
     }
-)}}
-/*
+}
+    /*
 function fetchHome(){
     xhrH = new XMLHttpRequest();
     let url = `https://swapi.py4e.com/api/planets/1/`
