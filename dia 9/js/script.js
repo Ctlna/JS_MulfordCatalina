@@ -1,6 +1,7 @@
 function fetchSwapi(){
+    let pId=document.getElementById("pId").value;
     xhr = new XMLHttpRequest();
-    let url = `https://swapi.py4e.com/api/people/1/`
+    let url = `https://swapi.py4e.com/api/people/${pId}`;
     xhr.open('GET',url,true);
     xhr.onreadystatechange=function(){
         if (this.readyState===4 && this.status===200){
@@ -300,7 +301,7 @@ function funcionar(dataL){
     /*
 function fetchHome(){
     xhrH = new XMLHttpRequest();
-    let url = `https://swapi.py4e.com/api/planets/1/`
+    let url = `https://swapi.py4e.com/api/planets/${pId}`
     xhrH.open('GET',url,true);
     xhrH.onreadystatechange=function(){
         if (this.readyState===4 && this.status===200){
