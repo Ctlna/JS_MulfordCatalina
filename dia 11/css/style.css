@@ -5,20 +5,33 @@ html{
 }
 #consola{
     position:absolute; 
-    left:40em; 
+    left:47em; 
     top:7em;
 }
 #info{
-    top: 17em;
+    top: 16em;
     background-color: transparent;
     width: 17em;
-    height: 14em;
+    height: 15em;
     position: absolute;
-    left: 44em;
+    left: 51em;
 }
 #busca{
-    position: absolute; 
-    left:50em;
-    top:36em;
-    text-align:center
+    position: absolute;
+    left: 49em;
+    top: 34em;
+    text-align: center;
+}
+#elID{
+    height: 2.5em;
+    width: 21.5em;
+    padding-left: 3px;
+    margin: 1em;
+}
+button {
+    height: 2.5em;
+    width: 8em;
+    margin: 1em;
+    background-color: black;
+    color: white;
 }

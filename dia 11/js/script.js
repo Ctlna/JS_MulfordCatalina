@@ -1,21 +1,37 @@
-//https://pokeapi.co/api/v2/pokemon/ditto
-$("#elID").keypress(function(e) { 
-    var code = (e.keyCode ? e.keyCode : e.which); 
-    if(code == 13 && $(this).val()!=""){
-        let pId=document.getElementById("elID").value;
-        xhr = new XMLHttpRequest();
-        let url = `https://pokeapi.co/api/v2/pokemon/${elID}`;
-        xhr.open('GET',url,true);
-        xhr.onreadystatechange=function(){
-            if (this.readyState===4 && this.status===200){
-                let response = JSON.parse(this.responseText);
-                poke(response);
-            }
-            else if(this.readyState===4){
-                console.log('Error: ',this.statusText);
-            }
-        };
-        xhr.send();
+$("#elID").on('keypress', function(e) {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        let inputValue = this.value.trim(); 
+        if (inputValue !== "") {
+            let url = `https://pokeapi.co/api/v2/pokemon/${inputValue}`;
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    poke(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        } else {
+            console.log("El campo está vacío");
         }
+    }
 });
-function poke(datos){}
+
+function poke(datos){
+    let info=document.getElementById('info')
+    if (datos.response==="error"){
+        info.innerHTML=`<p>Error:${datos.error}</p>`;
+    }
+    else{
+        info.innerHTML=`
+        <p><img src="${datos.image}"/></p>
+        <p>${datos.name} ${datos.id}</p>
+        `}
+}

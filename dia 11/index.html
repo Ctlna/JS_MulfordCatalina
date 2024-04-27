@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRUEBA POKEAPI</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div id="jugo">
         <img src="./scr/pokedex.png" alt="foto" id="consola">
         <div id="info" ></div>
         <div id="busca">
-            <input type="number" name="ID" id="elID" placeholder="Pon el ID"class="form-control input-sm solo_numeros" >
+            <input name="ID" id="elID" placeholder="Pon el ID"class="form-control input-sm solo_numeros" >
             <br>
             <button onclick="fetchDerecha()"><-Prev</button>
             <button onclick="fetchIzquierda()">Next-></button>
@@ -19,6 +20,7 @@
     </div>
 </body>
 <script src="./js/script.js"></script>
+
 </html>
 
 <!--
