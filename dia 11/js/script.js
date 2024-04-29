@@ -14,7 +14,7 @@ $("#elID").on('keypress', function(e) {
                 .then(data => {
                     console.log(data);
                     poke(data);
-                    mon(data)
+                    mon(data);
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -36,18 +36,12 @@ function poke(datos){
         `}
 }
 function mon(datos){
-    let imgen=document.getElementById('imgen')
-    if (datos.response==="error"){
-        imgen.innerHTML=`<p>Error:${datos.error}</p>`;
+    let imgen = document.getElementById("imgen");
+    if(datos.response === "error"){
+        imgen.innerHTML = `<p>Error ${datos.response}</p>`;
+    } else if(datos.sprites.other.showdown.front_default != null){
+        imgen.innerHTML = `<img class="imgen_img" src="${datos.sprites.other.showdown.front_default}"/>`;
+    }else{
+        imgen.innerHTML = `<img class="imgen" src="${datos.sprites.front_default}"/>`;
     }
-    else{
-        let imgen = document.getElementById("imgen");
-        if(datos.response === "error"){
-            imgen.innerHTML = `<p>Error ${datos.response}</p>`;
-        } else if(datos.sprites.other.showdown.front_default != null){
-            imgen.innerHTML = `<img class="imgen_img" src="${datos.imgen.other.showdown.front_default}"/>`;
-        }else{
-            imgen.innerHTML = `<img class="imgen" src="${datos.imgen.front_default}"/>`;
-        }
-        }
 }
