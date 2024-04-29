@@ -32,7 +32,7 @@ function poke(datos){
     }
     else{
         text.innerHTML=`
-        <p>${datos.id} ${datos.name}</p>
+        <p><span id="estoy"> ${datos.id}</span> - ${datos.name}</p>
         `}
 }
 function mon(datos){
