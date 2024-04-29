@@ -35,3 +35,15 @@ button {
     background-color: black;
     color: white;
 }
+#imgen{
+    width: 5em;
+    height: 5em;
+    position: relative;
+    left: 5.7em;
+    top: 4em;
+}
+#text{
+    position: relative;
+    top: 8em;
+    text-align: end;
+}

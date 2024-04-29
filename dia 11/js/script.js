@@ -14,6 +14,7 @@ $("#elID").on('keypress', function(e) {
                 .then(data => {
                     console.log(data);
                     poke(data);
+                    mon(data)
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -25,13 +26,28 @@ $("#elID").on('keypress', function(e) {
 });
 
 function poke(datos){
-    let info=document.getElementById('info')
+    let text=document.getElementById('text')
     if (datos.response==="error"){
-        info.innerHTML=`<p>Error:${datos.error}</p>`;
+        text.innerHTML=`<p>Error:${datos.error}</p>`;
     }
     else{
-        info.innerHTML=`
-        <p><img src="${datos.image}"/></p>
-        <p>${datos.name} ${datos.id}</p>
+        text.innerHTML=`
+        <p>${datos.id} ${datos.name}</p>
         `}
+}
+function mon(datos){
+    let imgen=document.getElementById('imgen')
+    if (datos.response==="error"){
+        imgen.innerHTML=`<p>Error:${datos.error}</p>`;
+    }
+    else{
+        let imgen = document.getElementById("imgen");
+        if(datos.response === "error"){
+            imgen.innerHTML = `<p>Error ${datos.response}</p>`;
+        } else if(datos.sprites.other.showdown.front_default != null){
+            imgen.innerHTML = `<img class="imgen_img" src="${datos.imgen.other.showdown.front_default}"/>`;
+        }else{
+            imgen.innerHTML = `<img class="imgen" src="${datos.imgen.front_default}"/>`;
+        }
+        }
 }
