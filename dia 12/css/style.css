@@ -1,0 +1,22 @@
+html{
+    color: rgb(247, 246, 246);
+    background: url("https://img.freepik.com/foto-gratis/fondo-rustico-madera-negra-espacio-copia_24972-1746.jpg?t=st=1714484783~exp=1714488383~hmac=2bad6a3b0b77d3ca2d223d415274a2cfce3fc11599aa04e006176663932994e8&w=1380");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-size: 6em;
+    text-align: center;
+    color: rgb(226, 173, 173);
+}
+.primero {
+    border: darkgray 3px solid;
+    width: 4em;
+    height: 2.4em;
+    margin: 35px;
+    font-size: 34px;
+    border-radius: 2em;
+}
+#iniciar{
+    text-align: center;
+}

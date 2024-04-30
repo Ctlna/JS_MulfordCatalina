@@ -18,13 +18,13 @@ function fetchInicio(){
 }
 function buscar(as){
     let xhro = new XMLHttpRequest();
-    let url = `https://deckofcardsapi.com/api/deck/${as}/draw/?count=2`;
+    let url = `https://deckofcardsapi.com/api/deck/${as}/draw/?count=1`;
     xhro.open('GET',url,true);
     xhro.onreadystatechange=function(){
         if (this.readyState===4 && this.status===200){
             let response = JSON.parse(this.responseText);
             console.log(response);
-            cosito(response)
+            cosito(response);
         }
         else if(this.readyState===4){
             console.log('Error: ',this.statusText);
