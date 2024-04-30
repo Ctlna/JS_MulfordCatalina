@@ -31,3 +31,12 @@ function buscar(as){
     }; 
     xhro.send();
 }
+function cosito(cartas){
+    let carat = document.getElementById('lazar');
+    if (cartas.response==="error"){
+        carat.innerHTML= `<p>Error:${cartas.response}</p>`;
+    }
+    else{
+        carat.innerHTML= `<carat class="imagen" src="${cartas.cards.svg}"/>`;
+    }
+}
