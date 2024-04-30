@@ -24,6 +24,7 @@ function buscar(as){
         if (this.readyState===4 && this.status===200){
             let response = JSON.parse(this.responseText);
             console.log(response);
+            cosito(response)
         }
         else if(this.readyState===4){
             console.log('Error: ',this.statusText);
@@ -32,11 +33,28 @@ function buscar(as){
     xhro.send();
 }
 function cosito(cartas){
-    let carat = document.getElementById('lazar');
+    let carat = document.getElementById('comparar');
+    let confirma = document.getElementById('confirma');    
     if (cartas.response==="error"){
         carat.innerHTML= `<p>Error:${cartas.response}</p>`;
     }
     else{
-        carat.innerHTML= `<carat class="imagen" src="${cartas.cards.svg}"/>`;
+        const comprar=document.getElementById("comparar").value;
+        confirma.addEventListener('click',(event) => {
+                console.log("Se puso "+comprar);           // BIEN... se repite pero esta bien
+
+                if (comprar==="mayor"){
+                    console.log("es mayor");
+                }
+                else if (comprar==="menor"){
+                    console.log("es menor");
+                }
+                else{
+                    console.log("Lo ingresado no es valido");
+                }
+            });
     }
 }
+
+
+        //carat.innerHTML= `<carat class="imagen" src="${cartas.cards.images.svg}"/>`;
