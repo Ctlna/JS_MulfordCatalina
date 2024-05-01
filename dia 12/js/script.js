@@ -43,70 +43,108 @@ function buscar(as){
     xhro.send();
 }
 
-function cosito(cartas){
-    let carat = document.getElementById('comparar');
-    let confirma = document.getElementById('confirma');    
-    if (cartas[0].value === "error" || cartas[1].value === "error"){
-        carat.innerHTML= `<p>Error: algo está mal</p>`;
-    }
-    else{
-        const comprar=document.getElementById("comparar").value;
-        confirma.addEventListener('click',(event) => {
-            console.log("Se puso "+comprar);           // BIEN... se repite pero está bien
-
-            let resultado = devolver(cartas); // Llamada a la función devolver para determinar el resultado
-
-            if (comprar==="mayor"){
-                if(resultado === "mayor"){
-                    console.log("Ganaste");
-                } else {
-                    console.log("Perdiste");
-                }
-            }
-            else if (comprar==="menor"){
-                if(resultado === "menor"){
-                    console.log("Ganaste");
-                } else {
-                    console.log("Perdiste");
-                }
-            }
-            else {
-                if(resultado === "igual"){
-                    console.log("Ganaste");
-                } else {
-                    console.log("Perdiste");
-                }
-            }
-        });
-    }
-}
-
 document.getElementById('confirma').addEventListener('click', function() {
     cosito(); 
 });
 
-function devolver(ruta){
+function cosito(cartas){
+    let imagenes=document.getElementById('lazar')
+    let carat = document.getElementById('comparar');
+    let confirma = document.getElementById('confirma');    
+    if (cartas[0].value === "ERROR" || cartas[1].value === "ERROR" ){
+        carat.innerHTML= `<p>Error: algo está mal</p>`;
+        imagenes.innerHTML= `<p>Error: algo está mal</p>`;
+    }
+    else{
+        const comprar=document.getElementById("comparar").value;
+        confirma.addEventListener('click',(event) => {
+            console.log("Se puso "+comprar);           
+
+            let resultado = devolver(cartas); 
+
+            if (comprar==="mayor"){
+                if(resultado === "mayor"){
+                    imagenes.innerHTML=`
+                    <p>Ganaste</p>
+                    <p>Tu carta era:</p>
+                    <p><img src="${cartas[0].images.svg}"/></p>
+                    <p>La carta del sistema era:</p>
+                    <p><img src="${cartas[1].images.svg}"/></p>
+                    `
+                } else {
+                    imagenes.innerHTML=`
+                    <p>Perdiste</p>
+                    <p>Tu carta era:</p>
+                    <p><img src="${cartas[0].images.svg}"/></p>
+                    <p>La carta del sistema era:</p>
+                    <p><img src="${cartas[1].images.svg}"/></p>
+                    `
+                }
+            }
+            else if (comprar==="menor"){
+                if(resultado === "menor"){
+                    imagenes.innerHTML=`
+                    <p>Ganaste</p>
+                    <p>Tu carta era:</p>
+                    <p><img src="${cartas[0].images.svg}"/></p>
+                    <p>La carta del sistema era:</p>
+                    <p><img src="${cartas[1].images.svg}"/></p>
+                    `
+                } else {
+                    imagenes.innerHTML=`
+                    <p>Perdiste</p>
+                    <p>Tu carta era:</p>
+                    <p><img src="${cartas[0].images.svg}"/></p>
+                    <p>La carta del sistema era:</p>
+                    <p><img src="${cartas[1].images.svg}"/></p>
+                    `
+                }
+            }
+            else if (comprar==="igual"){
+                if(resultado === "igual"){
+                    imagenes.innerHTML=`
+                    <p>Ganaste</p>
+                    <p>Tu carta era:</p>
+                    <p><img src="${cartas[0].images.svg}"/></p>
+                    <p>La carta del sistema era:</p>
+                    <p><img src="${cartas[1].images.svg}"/></p>
+                    `
+                } else {
+                    imagenes.innerHTML=`
+                    <p>Perdiste</p>
+                    <p>Tu carta era:</p>
+                    <p><img src="${cartas[0].images.svg}"/></p>
+                    <p>La carta del sistema era:</p>
+                    <p><img src="${cartas[1].images.svg}"/></p>
+                    `
+                }
+            }
+        });
+    }
+}// BIEN... necesita doble click pero es más funcional
+
+function devolver(cartas){
     let cartaCero="";
     let cartaUno="";
     // valor carta 0
-    if (ruta[0].value==="QUEEN" || ruta[0].value==="KING" || ruta[0].value==="JACK"){
+    if (cartas[0].value==="QUEEN" || cartas[0].value==="KING" || cartas[0].value==="JACK"){
         cartaCero=10;
     }
-    else if(ruta[0].value==="ACE"){
+    else if(cartas[0].value==="ACE"){
         cartaCero=1;
     }
     else{
-        cartaCero=parseInt(ruta[0].value);
+        cartaCero=parseInt(cartas[0].value);
     }
     // valor carta 1
-    if (ruta[1].value==="QUEEN" || ruta[1].value==="KING" || ruta[1].value==="JACK"){
+    if (cartas[1].value==="QUEEN" || cartas[1].value==="KING" || cartas[1].value==="JACK"){
         cartaUno=10;
     }
-    else if(ruta[1].value==="ACE"){
+    else if(cartas[1].value==="ACE"){
         cartaUno=1;
     }
     else{
-        cartaUno=parseInt(ruta[1].value);
+        cartaUno=parseInt(cartas[1].value);
     }
     //
     if (cartaCero>cartaUno){
