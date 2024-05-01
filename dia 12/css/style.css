@@ -1,6 +1,6 @@
 html{
     color: rgb(247, 246, 246);
-    background: url("https://img.freepik.com/foto-gratis/fondo-rustico-madera-negra-espacio-copia_24972-1746.jpg?t=st=1714484783~exp=1714488383~hmac=2bad6a3b0b77d3ca2d223d415274a2cfce3fc11599aa04e006176663932994e8&w=1380");
+    background: url("https://us.123rf.com/450wm/panychev/panychev1601/panychev160100351/51185512-material-artificial-simula-la-textura-de-madera-de-color-negro-la-ilustraci%C3%B3n-generada-por.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -9,14 +9,33 @@ h1{
     text-align: center;
     color: rgb(226, 173, 173);
 }
-.primero {
-    border: darkgray 3px solid;
+.primero, #confirma {
+    border: darkgray 6px solid;
     width: 4em;
     height: 2.4em;
     margin: 35px;
     font-size: 34px;
     border-radius: 2em;
 }
+#confirma{
+    width: 8em;
+}
 #iniciar{
     text-align: center;
+}
+.hidden{
+    display: none;
+}
+.juego{
+    text-align: center;
+    font-size: 3em;
+}
+input{
+    text-align: center;
+    border: darkgray 3px solid;
+    width: 4em;
+    height: 2.4em;
+    margin: 35px;
+    font-size: 34px;
+    border-radius: 2em;
 }

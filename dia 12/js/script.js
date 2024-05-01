@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function(){
+    const siboton = document.getElementById("si");
+    const juego = document.getElementById("juego");
+    siboton.addEventListener("click", function(){
+        juego.classList.toggle("hidden");
+    });
+});
+
 let baraja = "";
 function fetchInicio(){
     let xhr = new XMLHttpRequest();
@@ -55,6 +63,8 @@ function cosito(cartas){
             });
     }
 }
-
+document.getElementById('confirma').addEventListener('click', function() {
+    cosito(); 
+});
 
         //carat.innerHTML= `<carat class="imagen" src="${cartas.cards.images.svg}"/>`;
