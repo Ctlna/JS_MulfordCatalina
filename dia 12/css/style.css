@@ -17,6 +17,8 @@ h1{
     font-size: 34px;
     border-radius: 2em;
     text-align: center;
+    color: rgb(108 70 87);
+    ;
 }
 #confirma{
     width: 8em;
@@ -44,4 +46,8 @@ input{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+img{
+    position: relative;
+    bottom: 6em;
 }
