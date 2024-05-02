@@ -40,3 +40,8 @@ input{
     font-size: 34px;
     border-radius: 2em;
 }
+#lazar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

@@ -48,11 +48,13 @@ document.getElementById('confirma').addEventListener('click', function() {
 });
 
 function cosito(cartas){
-    let imagenes=document.getElementById('lazar')
+    let mensaje=document.getElementById('mensaje')
+    let imagenes=document.getElementById('tuCarta')
+    let cartaSis=document.getElementById('cartaSis')
     let carat = document.getElementById('comparar');
     let confirma = document.getElementById('confirma');    
     if (cartas[0].value === "ERROR" || cartas[1].value === "ERROR" ){
-        carat.innerHTML= `<p>Error: algo está mal</p>`;
+        mensaje.innerHTML= `<p>Error: algo está mal</p>`;
         imagenes.innerHTML= `<p>Error: algo está mal</p>`;
     }
     else{
@@ -64,18 +66,22 @@ function cosito(cartas){
 
             if (comprar==="mayor"){
                 if(resultado === "mayor"){
+                    mensaje.innerHTML=`<p>Ganaste</p>`
                     imagenes.innerHTML=`
-                    <p>Ganaste</p>
                     <p>Tu carta era:</p>
                     <p><img src="${cartas[0].images.svg}"/></p>
+                    `
+                    cartaSis.innerHTML=`
                     <p>La carta del sistema era:</p>
                     <p><img src="${cartas[1].images.svg}"/></p>
                     `
                 } else {
+                    mensaje.innerHTML=`<p>Perdiste</p>`
                     imagenes.innerHTML=`
-                    <p>Perdiste</p>
                     <p>Tu carta era:</p>
                     <p><img src="${cartas[0].images.svg}"/></p>
+                    `
+                    cartaSis.innerHTML=`
                     <p>La carta del sistema era:</p>
                     <p><img src="${cartas[1].images.svg}"/></p>
                     `
@@ -83,18 +89,22 @@ function cosito(cartas){
             }
             else if (comprar==="menor"){
                 if(resultado === "menor"){
+                    mensaje.innerHTML=`<p>Ganaste</p>`
                     imagenes.innerHTML=`
-                    <p>Ganaste</p>
                     <p>Tu carta era:</p>
                     <p><img src="${cartas[0].images.svg}"/></p>
+                    `
+                    cartaSis.innerHTML=`
                     <p>La carta del sistema era:</p>
                     <p><img src="${cartas[1].images.svg}"/></p>
                     `
                 } else {
+                    mensaje.innerHTML=`<p>Perdiste</p>`
                     imagenes.innerHTML=`
-                    <p>Perdiste</p>
                     <p>Tu carta era:</p>
                     <p><img src="${cartas[0].images.svg}"/></p>
+                    `
+                    cartaSis.innerHTML=`
                     <p>La carta del sistema era:</p>
                     <p><img src="${cartas[1].images.svg}"/></p>
                     `
@@ -102,18 +112,22 @@ function cosito(cartas){
             }
             else if (comprar==="igual"){
                 if(resultado === "igual"){
+                    mensaje.innerHTML=`<p>Ganaste</p>`
                     imagenes.innerHTML=`
-                    <p>Ganaste</p>
                     <p>Tu carta era:</p>
                     <p><img src="${cartas[0].images.svg}"/></p>
+                    `
+                    cartaSis.innerHTML=`
                     <p>La carta del sistema era:</p>
                     <p><img src="${cartas[1].images.svg}"/></p>
                     `
                 } else {
+                    mensaje.innerHTML=`<p>Perdiste</p>`
                     imagenes.innerHTML=`
-                    <p>Perdiste</p>
                     <p>Tu carta era:</p>
                     <p><img src="${cartas[0].images.svg}"/></p>
+                    `
+                    cartaSis.innerHTML=`
                     <p>La carta del sistema era:</p>
                     <p><img src="${cartas[1].images.svg}"/></p>
                     `
