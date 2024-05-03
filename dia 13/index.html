@@ -28,7 +28,12 @@
             </div>
         </div>
         <label for="productora">Productora</label><br>
-        <input type="text" id="productora"><br><br>
+        <select name="produ" id="productora">
+            <option value="blanco"></option>
+            <option value="marvel">Marvel</option>
+            <option value="dc">DC</option>
+        </select>
+
         <div id="botones">
             <button id="nHeroe" onclick="fetchNHeroe()">Nuevo Heroe</button>
             <button id="gHeroe" onclick="fetchGHeroe()">Guardar Heroe</button>

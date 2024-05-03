@@ -9,5 +9,13 @@ function fetchNHeroe(){
     let fecha = document.getElementById('fecha').value
     let productora = document.getElementById('productora').value
 
-    
+    return nuevo= {Heroe: personaje, Actor: actor, Edad:edad, Ubicacion:ubicacion, Poster:poster, Fecha:fecha, Empresa:productora};
+    fetchGHeroe(nuevo);
+}
+
+function fetchGHeroe(nuevo){
+    let guardar = document.querySelector('gHeroe');
+    guardar.addEventListener('click',function(){
+        heroes.push(nuevo);
+    })
 }
