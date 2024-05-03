@@ -21,18 +21,18 @@
             <div id="lLeft">
                 <label for="nActor">Nombre Actor</label><br>
                 <input type="text" id="nActor"><br><br>
-                <label for="fecha">Ubicaciòn</label><br>
-                <input type="text" id="fecha"><br><br>
-                <label for="dateAppears" class="form-label">Fecha</label><br>
-                <input type="date" class="form-control" name="dateAppears" id="dateAppears"><br><br>
+                <label for="ubicacion">Ubicaciòn</label><br>
+                <input type="text" id="ubicacion"><br><br>
+                <label for="fecha" class="form-label">Fecha</label><br>
+                <input type="date" class="form-control" name="dateAppears" id="fecha"><br><br>
             </div>
         </div>
         <label for="productora">Productora</label><br>
         <input type="text" id="productora"><br><br>
         <div id="botones">
-            <button id="nHeroe">Nuevo Heroe</button>
-            <button id="gHeroe">Guardar Heroe</button>
-            <button id="cancelar">Cancelar</button>    
+            <button id="nHeroe" onclick="fetchNHeroe()">Nuevo Heroe</button>
+            <button id="gHeroe" onclick="fetchGHeroe()">Guardar Heroe</button>
+            <button id="cancelar" onclick="fetchcancelar()">Cancelar</button>    
         </div>
     </div>
 </body>
