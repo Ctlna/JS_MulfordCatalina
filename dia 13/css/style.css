@@ -29,3 +29,9 @@ button{
 #cancelar{
     background-color: red;
 }
+#aparece{
+    color: rgb(68, 68, 233);
+    border: grey 2px solid;
+    border-radius: 4px;
+    padding: 1em;
+}

@@ -12,27 +12,33 @@
         <div id="hori">
             <div id="lRight">
                 <label for="nPersonaje">Nombre Personaje</label><br>
-                <input type="text" id="nPersonaje"><br><br>
+                <input type="text" id="nPersonaje" disabled = true;><br><br>
                 <label for="eActor">Edad Actor</label><br>
-                <input type="number" id="eActor"><br><br>
+                <input type="number" id="eActor" disabled = true;><br><br>
                 <label for="poster">Poster</label><br>
-                <input type="text" id="poster"><br><br>
+                <input type="text" id="poster" disabled = true;><br><br>
             </div>
             <div id="lLeft">
                 <label for="nActor">Nombre Actor</label><br>
-                <input type="text" id="nActor"><br><br>
+                <input type="text" id="nActor" disabled = true;><br><br>
                 <label for="ubicacion">Ubicaciòn</label><br>
-                <input type="text" id="ubicacion"><br><br>
+                <input type="text" id="ubicacion" disabled = true;><br><br>
                 <label for="fecha" class="form-label">Fecha</label><br>
-                <input type="date" class="form-control" name="dateAppears" id="fecha"><br><br>
+                <input type="date" class="form-control" name="dateAppears" id="fecha" disabled = true;><br><br>
             </div>
         </div>
         <label for="productora">Productora</label><br>
-        <select name="produ" id="productora">
+        <select name="produ" id="productora" disabled = true;>
             <option value="blanco"></option>
             <option value="marvel">Marvel</option>
             <option value="dc">DC</option>
         </select>
+<br>
+        <section id="aparece" class="hidden">
+            <h1>Trajes del personaje</h1>
+            <p>En esta secciòn podra registrar los trajes usados por el actor en cada pelicula</p>
+        </section>
+        <br>
 
         <div id="botones">
             <button id="nHeroe" onclick="fetchNHeroe()">Nuevo Heroe</button>
