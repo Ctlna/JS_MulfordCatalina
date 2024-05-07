@@ -22,18 +22,18 @@ document.addEventListener("DOMContentLoaded", function(){
     
         heroes.push(nuevo);
         console.log(heroes)
-        let hola = document.getElementById("aparece")
-        if(hola.innerText===""){
-            hola.innerHTML=`
+        let espacio = document.getElementById("aparece")
+        if(espacio.innerText===""){
+            espacio.innerHTML=`
             <p>${heroes}</p>
             `}
     });
 })
 
 function aparecera(){
-    let hola = document.getElementById("aparece")
-    if(hola.innerText===""){
-        hola.innerHTML=`
+    let espacio = document.getElementById("aparece")
+    if(espacio.innerText===""){
+        espacio.innerHTML=`
             <div class="col">
                 <div class="card border-primary mb-3" style="max-width: 100%;">
                     <div class="card-header">
@@ -51,5 +51,12 @@ function aparecera(){
                     </div>
                 </div>
             </div>`
+    }
+}
+function cancelar(){
+    let espacio = document.getElementById("aparece")
+    if(espacio.innerText===""){
+        espacio.innerHTML=`
+            `
     }
 }

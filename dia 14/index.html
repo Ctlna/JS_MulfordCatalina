@@ -39,7 +39,7 @@
                                     <div class="col">
                                         <div class="mb-3">
                                             <label for="age" class="form-label">Edad</label>
-                                            <input type="number" name="age" id="age" class="form-control">
+                                            <input type="number" name="age" id="age" class="form-control" min="1">
                                         </div>
                                     </div>
                                     <div class="col">
@@ -83,7 +83,7 @@
                                 </section>
                                 <button type="button" id="nHeroe" onclick="aparecera()" class="btn btn-dark">Nuevo Heroe</button>
                                 <button type="button" id="gHeroe" class="btn btn-primary">Guardar Heroe</button>
-                                <button type="reset" id="cancelar" class="btn btn-danger">Cancelar</button>
+                                <button type="reset" id="cancelar" onclick="cancelar()" class="btn btn-danger">Cancelar</button>
                             </form>
                         </div>
                     </div>
