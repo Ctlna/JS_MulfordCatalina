@@ -1,41 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(){
-    const nuevoboton = document.getElementById("nHeroe");
-    const espacio = document.getElementById("aparece");
-    nuevoboton.addEventListener("click", function(){
-        espacio.classList.toggle("hidden");
-    });
-});
-
 var heroes=[]
-
-
-/*function fetchnHeroe(){
-    document.getElementById('personaje').disabled = false;
-    document.getElementById('actor').disabled = false;
-    document.getElementById('poster').disabled = false;
-    document.getElementById('nActor').disabled = false;
-    document.getElementById('ubicacion').disabled = false;
-    document.getElementById('fecha').disabled = false;
-    document.getElementById('productora').disabled = false;
-
-
-    xhr = new XMLHttpRequest();
-    let url = `https://6634ea609bb0df2359a33071.mockapi.io/`
-    xhr.open('GET',url,true);
-    xhr.onreadystatechange=function(){
-        if (this.readyState===4 && this.status===200){
-            let response = JSON.parse(this.responseText);
-            heroes=response.deck_id;
-            console.log(heroes);
-            fetchGHeroe(heroes);
-        }
-        else if(this.readyState===4){
-            console.log('Error: ',this.statusText);
-        }
-    };
-    xhr.send();
-}*/
-
 
 document.addEventListener("DOMContentLoaded", function(){
     const guardar = document.getElementById('gHeroe');
@@ -59,16 +22,34 @@ document.addEventListener("DOMContentLoaded", function(){
     
         heroes.push(nuevo);
         console.log(heroes)
+        let hola = document.getElementById("aparece")
+        if(hola.innerText===""){
+            hola.innerHTML=`
+            <p>${heroes}</p>
+            `}
     });
 })
 
-function aparece(){
-    
-    if(document.getElementById){
-        var si = document.getElementById('aparece');
-        si.style.display == (si.style.display=='none')?'block':'none';
+function aparecera(){
+    let hola = document.getElementById("aparece")
+    if(hola.innerText===""){
+        hola.innerHTML=`
+            <div class="col">
+                <div class="card border-primary mb-3" style="max-width: 100%;">
+                    <div class="card-header">
+                        Registro de Trajes
+                    </div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Traje del personaje</h5>
+                        <p>En esta sección podrás registrar el nombre de los traje usados por el autor en cada una de las películas.</p>
+                        <a class="btn btn-warning" href="#" id="addSuite" onclick="newSuit()">+</a>
+                        <div class="" style="width: 100%;">
+                            <div class="container body-detail" id="newInputs">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
     }
-}
-window.onload = function(){
-    muestra('contenido');
 }
