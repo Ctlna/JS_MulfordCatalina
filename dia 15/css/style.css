@@ -1,0 +1,55 @@
+html{
+    text-align: center;
+    background-color: rgb(180, 133, 133);
+}
+#grande{
+        height: 25em;
+        background-color: rgb(206, 204, 204);
+        position: absolute;
+        width: 42em;
+        border-radius: 2px;
+        left: 15em;
+        top: 4em;
+}
+#chico {
+    background-color: whitesmoke;
+    position: absolute;
+    width: 42em;
+    height: 19em;
+    top: 6em;
+    border-radius: 2px;
+}
+#claro{
+    color: rgb(97, 95, 95);
+    color: rgb(97, 95, 95);
+    margin-top: 0;
+    position: relative;
+    bottom: 1em;
+}
+#oscuro{
+    margin-top: 0;
+    position: relative;
+    bottom: 1em;
+}
+#foto{
+    position: relative;
+    left: 18.5em;
+    width: 5em;
+}
+#self{
+    width: 40px;
+}
+img{
+    position: relative;
+    border-radius: 3em;
+    width: 5em;
+    bottom: 3em;
+}
+button {
+    position: relative;
+    bottom: 3em;
+    margin: 5px;
+    color: transparent;
+    background-color: transparent;
+    border: transparent 3px solid;
+}

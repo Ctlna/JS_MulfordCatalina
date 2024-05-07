@@ -6,6 +6,7 @@ window.onload=function lazar(){
         if (this.readyState===4 && this.status===200){
             let response = JSON.parse(this.responseText);
             console.log(response)
+            foto(response);
             info(response);
             email(response);
             naci(response);
@@ -19,6 +20,19 @@ window.onload=function lazar(){
     };
     xhr.send();
 }
+
+function foto(elLink){
+    let que = document.getElementById('foto');
+    if (elLink.response==="error"){
+        info.innerHTML=`<p>Error:${elLink.error}</p>`;
+    }
+    else{
+        corto=elLink.results[0]            
+        que.innerHTML=`
+        <img src=${corto.picture.medium}>
+        `};
+}
+
 
 function info(elLink){
     if (document.getElementById('name').onmousemove=true){
