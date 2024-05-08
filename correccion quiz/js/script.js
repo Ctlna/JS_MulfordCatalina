@@ -35,7 +35,8 @@ function foto(elLink){
 
 
 function info(elLink){
-    if (document.getElementById('name').onmousemove=true){
+    let name=document.getElementById('name')
+    name.addEventListener('mouseover', function() {
         let que = document.getElementById('claro');
         let info=document.getElementById('oscuro');
         if (elLink.response==="error"){
@@ -48,7 +49,7 @@ function info(elLink){
             info.innerHTML=`
             <h1>${corto.name.first}  ${corto.name.last}</h1>
             `};
-    }
+    });
 }
 
 function email(elLink){
