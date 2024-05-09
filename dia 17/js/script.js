@@ -13,6 +13,7 @@ window.onload=function lazar(){
             ubi(response);
             celu(response);
             clave(response);
+            logoanimation(response)
         }
         else if(this.readyState===4){
             console.log('Error: ',this.statusText);
@@ -21,18 +22,26 @@ window.onload=function lazar(){
     xhr.send();
 }
 
-function foto(elLink){
-    let que = document.getElementById('foto');
-    if (elLink.response==="error"){
-        info.innerHTML=`<p>Error:${elLink.error}</p>`;
+
+
+class logoanimation (elLink) extends HTMLAnchorElement{
+    constructor(){
+        super();
+        function foto(elLink){
+            let que = document.getElementById('foto');
+            if (elLink.response==="error"){
+                info.innerHTML=`<p>Error:${elLink.error}</p>`;
+            }
+            else{
+                corto=elLink.results[0]            
+                que.innerHTML=`
+                <img src=${corto.picture.medium}>
+                `};
+        }
     }
-    else{
-        corto=elLink.results[0]            
-        que.innerHTML=`
-        <img src=${corto.picture.medium}>
-        `};
 }
 
+customElements.define('boton-name',logoanimation,foto(elLink));
 
 function info(elLink){
     let name=document.getElementById('name')
