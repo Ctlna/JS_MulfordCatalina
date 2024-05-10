@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kode+Mono:wght@400..700&display=swap');
+body{
+    background-image: url(https://images.unsplash.com/photo-1570284613060-766c33850e00?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FsYXhpYSUyMGF6dWx8ZW58MHx8MHx8fDA%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1,#ti{
+    text-align: center;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+    color: white;   
+}
+p{
+    color: aliceblue;
+    font-size: 1em;
+}
+#espacio, #vehicle, #starships,#homeworld{
+    width: 45em;
+    margin-left: 18em;
+}
+#film{
+    width: 60em;
+    margin-left: 16em;
+}
+button{
+    background-color: transparent;
+    border: 2px solid lightblue;
+    color: aliceblue;   
+    border-radius: 3em;
+    width: 15em;
+    height: 4em;
+}
